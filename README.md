@@ -69,7 +69,7 @@ You can configure your map by passing in a dictionary of options when you create
 var myMap = new MapsLib({
   fusionTableId:      "1i6TRevea5S8D4Ccw6zd1OjGmdGCD05Kx_ggMM3d1",
   googleApiKey:       "AIzaSyAwjqcMnRtMuDDHF5XVhcH-UP_Db1UP1fc",
-  locationColumn:     "geometry",
+  locationColumn:     "Point",
   map_center:         [37.7749300	, -122.4194200],
   locationScope:      "San Francisco"
 });
