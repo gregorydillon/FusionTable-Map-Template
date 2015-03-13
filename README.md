@@ -23,8 +23,8 @@ You want to put your data on a searchable, filterable map. This is a free, open 
 * [v 1.4](https://github.com/derekeder/FusionTable-Map-Template/releases/tag/v1.4) - iframe template, MapsLib class
 * [v 1.3](https://github.com/derekeder/FusionTable-Map-Template/releases/tag/v1.3) - Bootstrap 3.2, more robust query function, dynamic zoom
 * [v 1.2](https://github.com/derekeder/FusionTable-Map-Template/releases/tag/v1.2) - Bootstrap 3, jQuery 1.10.2, jQuery Address 1.6
-* [v 1.1](https://github.com/derekeder/FusionTable-Map-Template/releases/tag/v1.1) - Bootstrap 2.0.3, jQuery 1.7.1, jQuery Address 1.4 
-  
+* [v 1.1](https://github.com/derekeder/FusionTable-Map-Template/releases/tag/v1.1) - Bootstrap 2.0.3, jQuery 1.7.1, jQuery Address 1.4
+
 ## Dependencies
 
 * [Google Fusion Tables](http://www.google.com/fusiontables/Home)
@@ -59,7 +59,7 @@ Follow the steps below and you'll be in business with your own map.
    1. **map_center** - the lat/long you want your map to center on ([find yours here](http://www.itouchmap.com/latlong.html))
    1. **locationScope** - the area you want to limit searches to (set to 'chicago' by default)
 1. Add/modify additional filters to maps_lib.js. This will depend on the data you are trying to map. Take a look at the [wiki](https://github.com/derekeder/FusionTable-Map-Template/wiki) for [filter examples](https://github.com/derekeder/FusionTable-Map-Template/wiki/Filter-examples) and [list views](https://github.com/derekeder/FusionTable-Map-Template/wiki/List-search-results) to get started.
-1. Upload this map and all the supporting files (css, fonts, images and js folders) to your site 
+1. Upload this map and all the supporting files (css, fonts, images and js folders) to your site
 
 ## MapsLib options
 
@@ -67,11 +67,11 @@ You can configure your map by passing in a dictionary of options when you create
 
 ```javascript
 var myMap = new MapsLib({
-  fusionTableId:      "1m4Ez9xyTGfY2CU6O-UgEcPzlS0rnzLU93e4Faa0",
-  googleApiKey:       "AIzaSyA3FQFrNr5W2OEVmuENqhb2MBB2JabdaOY",
+  fusionTableId:      "1i6TRevea5S8D4Ccw6zd1OjGmdGCD05Kx_ggMM3d1",
+  googleApiKey:       "AIzaSyAwjqcMnRtMuDDHF5XVhcH-UP_Db1UP1fc",
   locationColumn:     "geometry",
-  map_center:         [41.8781136, -87.66677856445312],
-  locationScope:      "chicago"
+  map_center:         [37.7749300	, -122.4194200],
+  locationScope:      "San Francisco"
 });
 ```
 
@@ -115,10 +115,10 @@ This template works exactly the same way as the standard full screen template. A
 To embed, you can use the following code on your page:
 
 ```html
-<iframe 
-  style="border-style: none;" 
-  src="/path/to/map-template/index_iframe.html" 
-  width="600" 
+<iframe
+  style="border-style: none;"
+  src="/path/to/map-template/index_iframe.html"
+  width="600"
   height="950" >
 </iframe>
 ```
@@ -135,7 +135,7 @@ If you want to create a map with two layers - one with points and another with p
 
 ## Resources
 
-Fusion Tables 
+Fusion Tables
 
 * [Fusion Tables Home](http://www.google.com/fusiontables/Home)
 * [v1 API Documentation](https://developers.google.com/fusiontables/docs/v1/using)
@@ -158,10 +158,10 @@ Reference Guides
 If your map isn't displaying any data, try the following:
 
 1. Use the [Chrome developer console](https://developers.google.com/chrome-developer-tools/docs/console) or install [Firebug](http://getfirebug.com/) for FireFox. This will allow you to debug your javascript.
-1. Load your map in the browser and open the javascript console 
+1. Load your map in the browser and open the javascript console
    * Chrome developer console on a Mac: Option+Command+J
    * Chrome developer console on a PC: Control+Shift+J
-   * Firebug in Firefox: Tools => Web Developer => Firebug => Open Firebug) 
+   * Firebug in Firefox: Tools => Web Developer => Firebug => Open Firebug)
 1. If you aren't seeing any javascript errors:
    * Make sure that you have at least one column with address or lat/long points set to type 'Location'. You can check this in Fusion Tables under Edit => Modify Columns.
    * Make sure that Fusion Tables has geocoded your column. You check this by going to View => Map. If you see your points on the map, you're good!
@@ -169,9 +169,9 @@ If your map isn't displaying any data, try the following:
 1. If you do see javascript errors:
    * The error will tell you what line it is failing on. Best to start by going there!
    * Columns in Fusion Tables are case sensitive, so make sure they are correct.
-   * For columns that have multiple words in the title, make sure to surround the column name in your code with single quotes (example: "'first name'") 
+   * For columns that have multiple words in the title, make sure to surround the column name in your code with single quotes (example: "'first name'")
 
-#### My custom map styles won't display! 
+#### My custom map styles won't display!
 
 This is due to a recent change to the FusionTablesLayer and only effects tables created after mid-November 2012. A __styleId__ and __templateId__ must be defined.
 
@@ -195,7 +195,7 @@ For more information, see [Working with styles](https://developers.google.com/fu
 
 #### I want to display custom icons on my map
 
-By default, Fusion Tables only provides 10 (5 large and 5 small) marker icons. 
+By default, Fusion Tables only provides 10 (5 large and 5 small) marker icons.
 
 <img src="http://storage.googleapis.com/support-kms-prod/SNP_2752125_en_v0" alt="small red map dot" title="small red map dot" width="9" height="9">&nbsp;<img src="http://storage.googleapis.com/support-kms-prod/SNP_2752063_en_v0" alt="small yellow map dot" title="small yellow map dot" width="9" height="9">&nbsp;<img src="http://storage.googleapis.com/support-kms-prod/SNP_2752129_en_v0" alt="small green map dot" title="small green map dot" width="9" height="9">&nbsp;<img src="http://storage.googleapis.com/support-kms-prod/SNP_2752068_en_v0" alt="small blue map dot" title="small blue map dot" width="9" height="9">&nbsp;<img src="http://storage.googleapis.com/support-kms-prod/SNP_2752264_en_v0" alt="small purple map dot" title="small purple map dot" width="9" height="9">&nbsp;<img alt="large_red" src="http://chart.googleapis.com/chart?chst=d_map_pin_letter&amp;chld=|FF0000">&nbsp;<img alt="large_yellow" src="http://chart.googleapis.com/chart?chst=d_map_pin_letter&amp;chld=|FFFF00">&nbsp;<img alt="large_green" src="http://chart.googleapis.com/chart?chst=d_map_pin_letter&amp;chld=|00FF00">&nbsp;<img alt="large_blue" src="http://chart.googleapis.com/chart?chst=d_map_pin_letter&amp;chld=|6699FF">&nbsp;<img alt="large_purple" src="http://chart.googleapis.com/chart?chst=d_map_pin_letter&amp;chld=|9933FF">
 
@@ -217,12 +217,12 @@ Ask for help on our [Fusion Table Map Template Google Group](https://groups.goog
 ## Bug fixes and pull requests
 
 Notice a bug or want to add a feature? [Open an issue](https://github.com/derekeder/FusionTable-Map-Template/issues) or submit a pull request like so:
- 
+
 1. Fork the project.
 1. Make your feature addition or bug fix.
 1. Commit and send me a pull request.
 
-## Contributors 
+## Contributors
 
 * [Derek Eder](http://derekeder.com) - primary contributor
 * [Chris Keller](http://www.chrislkeller.com/) - [recenter map on resize](https://github.com/derekeder/FusionTable-Map-Template/pull/11)
@@ -233,10 +233,10 @@ Notice a bug or want to add a feature? [Open an issue](https://github.com/dereke
 
 Copyright (c) 2015 Derek Eder. Released under the MIT License.
 
-If you use this template, please provide the following attribution in the footer: 
+If you use this template, please provide the following attribution in the footer:
 
 ```html
-<a href='http://derekeder.com/searchable_map_template/'>Searchable Map Template</a> 
+<a href='http://derekeder.com/searchable_map_template/'>Searchable Map Template</a>
 by <a href='http://derekeder.com'>Derek Eder</a>.
 ```
 
