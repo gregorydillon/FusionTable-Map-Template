@@ -29,6 +29,9 @@
           <ul class="nav navbar-nav navbar-right">
             <li class='active'><a href="index.html">Map</a></li>
             <li><a href="about.html">About</a></li>
+            <div class='well'>
+            <div id='results_list'></div>
+            </div>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -120,10 +123,11 @@
 
         $(function() {
           var myMap = new MapsLib({
+            // fusionTableId:      "1aUrCZGD7C8BDoWG8zqj5KgUx7eaFuBfO2cvg0874",
             fusionTableId:      "1i6TRevea5S8D4Ccw6zd1OjGmdGCD05Kx_ggMM3d1",
             googleApiKey:       "AIzaSyAwjqcMnRtMuDDHF5XVhcH-UP_Db1UP1fc",
             locationColumn:     "Point",
-            map_center:         [ 37.7749300	, -122.4194200],
+            map_center:         [ 37.761251, -122.418523],
             locationScope:      "San Francisco"
           });
 
