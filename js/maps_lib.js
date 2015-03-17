@@ -24,7 +24,7 @@
         this.locationScope = options.locationScope || 'San Francisco';
 
         // zoom level when map is loaded (bigger is more zoomed in)
-        this.defaultZoom = options.defaultZoom || 12;
+        this.defaultZoom = options.defaultZoom || 16;
 
         // center that your map defaults to
         this.map_centroid = new google.maps.LatLng(options.map_center[0], options.map_center[1]);
